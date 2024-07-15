@@ -58,7 +58,7 @@ function loop() {
   requestAnimationFrame(loop);
 
   // slow game loop to 15 fps instead of 60 (60/15 = 4)
-  if (++count < 4)
+  if (++count < 4) {
     return;
   }
 
@@ -82,9 +82,8 @@ function loop() {
     snake.y = canvas.height - grid;
   }
   else if (snake.y >= canvas.height) {
-    snake.y = 0
+    snake.y = 0;
   }
 
   // keep track of where snake has been. front of the array is always the head
   sanke.cells.unshift({x: snake.x, y: snake.y});
-
